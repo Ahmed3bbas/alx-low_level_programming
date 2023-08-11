@@ -13,7 +13,7 @@ int main(void)
 char alpha[ALPHA_SIZE] = "abcdefghijklmnopqrstuvwxyz";
 /* your code goes there */
 int i = 0;
-for (i =( ALPHA_SIZE - 1); i >= 0; i--)
+for (i = (ALPHA_SIZE - 1); i >= 0; i--)
 {
 putchar(alpha[i]);
 }
