@@ -17,9 +17,9 @@ for (i = 0; i < ALPHA_SIZE; i++)
 {
 putchar(alpha[i]);
 }
-for (i = 0; i < (ALPHA_SIZE-1); i++)
+for (i = 0; i < ALPHA_SIZE; i++)
 {
-putchar((alpha[i]-31));
+putchar((alpha[i]-32));
 }
 putchar('\n');
 return (0);
