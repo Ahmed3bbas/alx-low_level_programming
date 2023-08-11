@@ -10,7 +10,7 @@
 */
 int main(void)
 {
-char num[NUM_SIZE] = "123456789";
+char num[NUM_SIZE] = "0123456789";
 /* your code goes there */
 int i = 0;
 for (i = 0; i < NUM_SIZE; i++)
