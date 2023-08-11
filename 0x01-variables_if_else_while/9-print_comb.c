@@ -14,14 +14,12 @@ int main(void)
 int i = 0;
 for (i = 0; i < NUM_SIZE; i++)
 {
-if(i==9)
+putchar((i + 48));
+if ((i != 9))
 {
-putchar((i + 48));
-break;
-}
-putchar((i + 48));
 putchar(',');
 putchar(' ');
+}
 }
 putchar('\n');
 return (0);
