@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-#define NUM_SIZE  26
+#define NUM_SIZE  10
 /* betty style doc for function main goes there */
 /**
  * main - My Main Program
