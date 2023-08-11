@@ -6,7 +6,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - My Main Program
- *Return: Eroor or Success
+ *Return: Eroor or Success (0)
 */
 int main(void)
 {
@@ -20,7 +20,7 @@ printf("%d is positive\n", n);
 }
 else if (n < 0)
 {
-printf("%d is negative\n", n);     
+printf("%d is negative\n", n);
 }
 else
 {
