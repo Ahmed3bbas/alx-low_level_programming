@@ -14,7 +14,7 @@ int main(void)
 int i = 0;
 for (i = 0; i < NUM_SIZE; i++)
 {
-putchar(( i + 48));
+putchar((i + 48));
 }
 putchar('\n');
 return (0);
