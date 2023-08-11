@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main -Main Program
+ * main - My Main Program
  *Return: Eroor or Success
 */
 int main(void)
