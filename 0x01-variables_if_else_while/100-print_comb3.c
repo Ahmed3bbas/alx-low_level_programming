@@ -2,6 +2,13 @@
 
 #define DIGITSHIFT 48
 
+/**
+  * main - print comination of 2 digits.
+  * viod
+  *
+  * Description: print comination of 2 digits with loops.
+  * Return: 0 for sucess state
+  */
 int main(void)
 {
 	int i = 0, j;
@@ -32,5 +39,5 @@ int main(void)
 		i += 1;
 	}
 	putchar('\n');
-	return (1);
+	return (0);
 }
