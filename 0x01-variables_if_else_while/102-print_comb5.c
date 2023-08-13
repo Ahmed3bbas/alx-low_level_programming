@@ -23,7 +23,15 @@ int main(void)
 
 			while (c <= 9)
 			{
-				f = j + 1;
+				if(c == 0)
+				{
+					f = j + 1;
+				}
+				else
+				{
+					f = 0;
+				}
+
 				while (f <= 9)
 				{
 					putchar(i + DIGITSHIFT);
