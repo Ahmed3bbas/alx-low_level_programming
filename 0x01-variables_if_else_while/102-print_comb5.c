@@ -2,9 +2,10 @@
 
 #define DIGITSHIFT 48
 
+void print(int i, int j, int c, int f);
 /**
   * main - print comination of 4 digits.
-  * viod
+  * void
   *
   * Description: print comination of 4 digits with loops.
   * Return: 0 for sucess state
@@ -16,14 +17,13 @@ int main(void)
 	while (i < 10)
 	{
 		j = 0;
-
 		while (j <= 9)
 		{
 			c = i;
-
+			f = 0;
 			while (c <= 9)
 			{
-				if(c == 0)
+				if (i * 10 + j >= c * 10 + f)
 				{
 					f = j + 1;
 				}
@@ -31,15 +31,9 @@ int main(void)
 				{
 					f = 0;
 				}
-
 				while (f <= 9)
 				{
-					putchar(i + DIGITSHIFT);
-					putchar(j + DIGITSHIFT);
-					putchar(' ');
-					putchar(c + DIGITSHIFT);
-					putchar(f + DIGITSHIFT);
-
+					print(i, j, c, f);
 					if (i == 9 && j == 8 && c == 9 && f == 9)
 					{
 						break;
@@ -59,4 +53,24 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
+}
+
+/**
+  * print - print four digit in spceific format
+  * @i: intger number
+  * @j: intger number
+  * @c: intger number
+  * @f: intger number
+  *
+  * Description: print four digit in spcific fotmats
+  * without any returns
+  * Return: void
+ */
+void print(int i, int j, int c, int f)
+{
+	putchar(i + DIGITSHIFT);
+	putchar(j + DIGITSHIFT);
+	putchar(' ');
+	putchar(c + DIGITSHIFT);
+	putchar(f + DIGITSHIFT);
 }
