@@ -2,7 +2,7 @@
 unsigned long int fibonacci(int);
 
 /**
- * main - print first 50 numbers of fabonacci
+ * main - prlong first 50 numbers of fabonacci
  *
  * Return: 0 for scucess state
  */
@@ -11,22 +11,12 @@ int main(void)
 {
 	unsigned long int i = 1, res;
 	unsigned long int MAX = 98;
-	unsigned long int prev = 1, prev_1 = 2;
 
 	while (i <= MAX)
 	{
-		if (res < 2)
-		{
-			res = i;
-		}
-		else
-		{
-			res = prev + prev_1;
-			prev = prev_1;
-			prev_1 = res;
-		}
+		res = fibonacci(i);
 
-		printf("%lu", res);
+		printf("%llu", res);
 		if (i != MAX)
 		{
 			printf(", ");
@@ -39,18 +29,17 @@ int main(void)
 
 /**
  * fibonacci - calculate faboncci series
- * @n: intger number
+ * @n: longger number
  *
  * Return: the calualted results
  */
 unsigned long int fibonacci(int n)
 {
-	unsigned long int res = n;
+	unsigned long int res = 1;
 
-	if (n > 2)
+	if (n > 1)
 	{
-		res = fibonacci(n - 1) + fibonacci(n - 2);
+		res = n * fibonacci(n - 1);
 	}
-
 	return (res);
 }
