@@ -38,7 +38,6 @@ void times_table(void)
 			}
 			r++;
 		}
-		_putchar('$');
 		_putchar('\n');
 
 		c++;
