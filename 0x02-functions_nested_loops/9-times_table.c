@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
-  * times_table - 
+  * times_table - print 9 times table
+  *
+  * Return: void
  */
 
 void times_table(void)
 {
 	int c = 0, r = 0, res;
 
-	while ( c < 10 )
+	while (c < 10)
 	{
 		r = 0;
 
-		while ( r < 10)
+		while (r < 10)
 		{
 			res = r * c;
 			if (res < 10)
 			{
-				if ( r != 0)
+				if (r != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
