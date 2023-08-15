@@ -42,9 +42,15 @@ void increment_to_98(int n)
 	else if (i < 0)
 	{
 		_putchar('-');
-		if (i <= -10)
+		if (i <= -10 && i > -100)
 		{
 			_putchar(-1 * i / 10 + '0');
+			_putchar(-1 * i % 10 + '0');
+		}
+		else if (i <= -100)
+		{
+			_putchar(-1 * i / 100 + '0');
+			_putchar((-1 * i / 10) % 10 + '0');
 			_putchar(-1 * i % 10 + '0');
 		}
 		else
