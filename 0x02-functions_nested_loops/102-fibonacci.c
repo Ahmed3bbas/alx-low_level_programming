@@ -36,7 +36,8 @@ int main(void)
 unsigned long int fibonacci(int n)
 {
 	unsigned long int res = n;
-	if ( n > 2)
+
+	if (n > 2)
 	{
 		res = fibonacci(n - 1) + fibonacci(n - 2);
 	}
