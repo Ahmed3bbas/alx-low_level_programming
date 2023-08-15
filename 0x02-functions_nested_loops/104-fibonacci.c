@@ -2,7 +2,7 @@
 unsigned long int fibonacci(int);
 
 /**
- * main - print first 50 numbers of fabonacci
+ * main - prlong first 50 numbers of fabonacci
  *
  * Return: 0 for scucess state
  */
@@ -10,7 +10,7 @@ unsigned long int fibonacci(int);
 int main(void)
 {
 	unsigned long int i = 1, res;
-	const int MAX = 98;
+	unsigned long int MAX = 98;
 
 	while (i <= MAX)
 	{
@@ -29,7 +29,7 @@ int main(void)
 
 /**
  * fibonacci - calculate faboncci series
- * @n: intger number
+ * @n: longger number
  *
  * Return: the calualted results
  */
