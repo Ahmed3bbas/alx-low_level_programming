@@ -10,7 +10,7 @@ unsigned long int fibonacci(int);
 int main(void)
 {
 	unsigned long int i = 1, res;
-	const int MAX = 50;
+	unsigned long int MAX = 50;
 
 	while (i <= MAX)
 	{
