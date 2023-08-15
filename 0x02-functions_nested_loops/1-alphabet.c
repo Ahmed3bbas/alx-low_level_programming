@@ -1,13 +1,12 @@
-#include "main.h"
 
 /**
-  * main - print string without printf
+  * print_alphabet - print alpjabet in lower case
   * void
   *
-  * Return: 0 for success state
+  * Return: void
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char c = 'a' ;
 
@@ -18,5 +17,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-	return (0);
 }
