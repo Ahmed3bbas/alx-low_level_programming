@@ -11,10 +11,20 @@ int main(void)
 {
 	unsigned long int i = 1, res;
 	unsigned long int MAX = 50;
+	unsigned long int prev = 1, prev_1 = 2;
 
 	while (i <= MAX)
 	{
-		res = fibonacci(i);
+		if (res < 2)
+		{
+			res = i;
+		}
+		else
+		{
+			res = prev + prev_1;
+			prev = prev_1;
+			prev_1 = res;
+		}
 
 		printf("%lu", res);
 		if (i != MAX)
