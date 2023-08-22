@@ -2,7 +2,7 @@
 /**
  * reset_to_98 - check the code
  *
- * @parameter: n is a number to reset to 98
+ * @parameter: n is a number
  */
 void reset_to_98(int *n)
 {
