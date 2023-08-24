@@ -1,9 +1,9 @@
 /**
 *_strcmp - Compare two strings
 *@s1: First String
-*@s2: Second Striing
+*@s2: Second String
 *
-*Return: int 0(s1 = s2), 1(s1 > s2), -1(s1 <s2)
+*Return: int Comapre Result
 */
 int _strcmp(char *s1, char *s2)
 {
