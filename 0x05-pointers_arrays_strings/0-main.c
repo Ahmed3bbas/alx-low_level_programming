@@ -1,10 +1,8 @@
 #include "main.h"
-#include <stdio.h>
-#include "reset_to_98.h"
 /**
  * main - check the code 
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 void reset_to_98(int *n);
 int main(void)

@@ -1,8 +1,8 @@
-#include "reset_to_98.h"
 /**
  * reset_to_98 - check the code
+ * @n: n is a number to be reset
  *
- * @parameter: n is a number
+ * Return: Void
  */
 void reset_to_98(int *n)
 {
