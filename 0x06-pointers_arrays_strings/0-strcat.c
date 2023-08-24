@@ -1,7 +1,7 @@
 /**
- *_strcat - check the code
- *@*dest: Pointer to the  First String to be concatenated
- *@*src : Pointer to the Second String to be concatenated
+ *_strcat - Concatenate src with dest
+ *@dest: Pointer to the dest
+ *@src : Pointer to src
  *
  *Return: Char*
  */

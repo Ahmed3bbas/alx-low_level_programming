@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *_strncat - Copy n Characters from src to dest
- *@*dest: Pointer to the  First String to be concatenated
- *@*src: Pointer to the Second String to be concatenated
+ *_strncat - Concatenate n characters of src with dest
+ *@dest: Pointer to dest
+ *@src: Pointer to src
  *@n: Number of Charactrs to be Concatenated
  *
  *Return: Char*
