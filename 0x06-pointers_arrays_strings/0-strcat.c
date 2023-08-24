@@ -11,19 +11,19 @@ int src_len = 0;
 int dest_len = 0;
 int i = 0;
 int j = 0;
-while(*(src+i) != '\0')
+while (*(src + i) != '\0')
 {
 i++;
 src_len++;
 }
-while(*(dest+j) != '\0')
+while (*(dest + j) != '\0')
 {
 j++;
 dest_len++;
 }
-for(i = 0; i < src_len; i++)
+for (i = 0; i < src_len; i++)
 {
-*(dest+dest_len+i) = *(src+i);
+*(dest + dest_len + i) = *(src + i);
 }
-return dest;
+return (dest);
 }
