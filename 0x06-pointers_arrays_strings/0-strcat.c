@@ -1,5 +1,5 @@
 /**
- * _strcat - check the code
+ *_strcat - check the code
  *@*dest: Pointer to the  First String to be concatenated
  *@*src : Pointer to the Second String to be concatenated
  *
