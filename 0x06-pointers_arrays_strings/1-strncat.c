@@ -23,19 +23,19 @@ while (*(dest + j) != '\0')
 j++;
 dest_len++;
 }
-if(src_len >= n)
+if (src_len >= n)
 {
 for (i = 0; i < n; i++)
 {
 *(dest + dest_len + i) = *(src + i);
-}   
+}
 }
 else
 {
 for (i = 0; i < src_len; i++)
 {
 *(dest + dest_len + i) = *(src + i);
-}     
+}
 }
 return (dest);
 }
