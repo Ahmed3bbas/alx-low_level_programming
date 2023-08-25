@@ -8,20 +8,24 @@
 int _strcmp(char *s1, char *s2)
 {
 int i = 0;
-int j = 0;
 int cmp = -1;
-int s1_sum = 0;
-int s2_sum = 0;
+int s1_len = 0;
 while (*(s1 + i) != '\0')
 {
-s1_sum += s1[i] - 0x26;
 i++;
+s1_len++;
 }
-while (*(s2 + j) != '\0')
+for (i = 0; i < s1_len; i++)
 {
-s2_sum += s2[j] - 0x26;
-j++;
+cmp = (int)(s1[i] - s2[i]);
+if (cmp == 0)
+{
+continue;
 }
-cmp = (s1_sum - s2_sum);
+else
+{
+break;
+}
+}
 return (cmp);
 }
