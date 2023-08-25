@@ -1,7 +1,7 @@
 #define UPPER_INDEX 32
 /**
 *string_toupper - Convert each character into upper case
-*@*str: Pointer to String
+*@str: Pointer to String
 *
 *Return: Char*
 */

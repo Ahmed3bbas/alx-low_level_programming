@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * reverse_array - Revers Array
- * @a: The array
- * @n: The number of elements in the array
- *
- * Return: nothing.
- */
+*reverse_array - Revers Array
+*@a: The array
+*@n: The number of elements in the array
+*
+* Return: nothing.
+*/
 void reverse_array(int *a, int n)
 {
 int *ptr_m = (int *)malloc(n * sizeof(int));
