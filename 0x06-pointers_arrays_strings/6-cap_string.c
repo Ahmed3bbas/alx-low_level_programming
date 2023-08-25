@@ -28,6 +28,7 @@ case ')':
 case '{':
 case '}':
 case ';':
+case '\n':
 if (str[i + 1] >= FIRST_LOWER && str[i + 1] <= LAST_LOWER)
 {
 str[i + 1] = (int)str[i + 1] - UPPER_INDEX;
