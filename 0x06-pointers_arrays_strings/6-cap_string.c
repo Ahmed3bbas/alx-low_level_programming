@@ -18,7 +18,7 @@ switch (str[i])
 {
 case '.':
 case ' ':
-case '-':
+case '\t':
 case ',':
 case '?':
 case '!':
