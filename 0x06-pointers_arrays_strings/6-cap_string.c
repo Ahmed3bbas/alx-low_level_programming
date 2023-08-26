@@ -3,17 +3,16 @@
 #define LAST_LOWER  122
 
 /**
-*cap_string - Convert first character into upper case
+*cap_string - Convert each word's first character into upper case
 *@str: Pointer to String
 *
-*Return: Char*
+*Return: Char* Pointer to the string
 */
 char *cap_string(char *str)
 {
 int i = 0;
 while (*(str + i) != '\0')
 {
-
 switch (str[i])
 {
 case '.':
