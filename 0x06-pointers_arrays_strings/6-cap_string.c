@@ -1,3 +1,4 @@
+#include <stdio.h>
 #define ALPHA_DIFF  32
 #define FIRST_LOWER 97
 #define LAST_LOWER  122
