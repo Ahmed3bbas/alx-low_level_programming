@@ -17,6 +17,9 @@ for (i = 0, j = n - 1; i < n; i++, j--)
 {
 ptr_m[i] = a[j];
 }
-memcpy(a, ptr_m, n * 4);
+for (i = 0; i < n; i++)
+{
+a[i] = ptr_m[i];
+}
 free(ptr_m);
 }
