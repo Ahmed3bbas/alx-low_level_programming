@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *main - check the code 
+ *main - check the code
  *@argc: Number of Arguments
  *@argv: Argument Array
  *Return: Always 0.
