@@ -6,9 +6,9 @@
  *
  * Return: Always 0.
  */
-int main(int argc, char * argv[])
+int main(__attribute(unused) int argc, char * argv[])
 {
-puts(argv[argc-1]);
+puts(argv[0]);
 return (0);
 }
 
