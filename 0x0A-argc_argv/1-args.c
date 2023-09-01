@@ -14,7 +14,7 @@ while (argc > 0)
 sum++;
 argc--;
 }
-printf("%d\n", sum);
+printf("%d\n", sum-1);
 return (0);
 }
 
