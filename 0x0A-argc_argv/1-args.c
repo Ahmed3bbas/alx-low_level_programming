@@ -5,7 +5,7 @@
  * main - check the code
  *@argc: Counter of Arguments
  *@argv: Argument Array
- * Return: Always 0.
+ *Return: Always 0.
  */
 int main(int argc, __attribute__((__unused__))char *argv[])
 {
