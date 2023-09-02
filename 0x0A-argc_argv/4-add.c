@@ -1,17 +1,66 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
-#include "main.h"
+#include <stdio.h>
 /**
- *Add - Add two Integers
- *@a: First Number
- *@b: Second Number
- *Return: Addition  Result
- */
-int Add(int a, int b)
+ * power - power of a number
+ * @n: number
+ * @p: power
+ *
+ * Return: int
+*/
+int power(int n , int p)
 {
-return ((int)(a + b));
+        int s=1, i = 0;
+        while (i < p)
+        {
+                s *= n;
+                i++;
+        }
+        return (s);
 }
+
+/**
+  * cvtdig - convert to digit
+  * @s - string
+  * Return: intger number
+  */
+
+int cvtdig(char *s)
+{
+
+	int i ,n = 0 , l = strlen(s);
+	i = l - 1;
+	while (i >= 0)
+	{
+		n += ((s[l - (i + 1)] - '0') * power(10 , i));
+		i--;
+	}
+	return (n);
+}
+
+/**
+  * _is_digit - check if input is digit
+  * @s: string
+  * return: 1 if input is digit
+  */
+
+int _is_digit(char *s)
+{
+	int i = 0;
+	char c;
+
+	while (s[i] != '\0')
+	{
+		c = s[i];
+		if(c < '0' || c > '9')
+		{
+			return (0);
+		}
+		i++;
+		
+	}
+	return (1);
+}
+
 /**
  *main - check the code
  *@argc: Counter of Arguments
@@ -21,60 +70,34 @@ return ((int)(a + b));
 int main(int argc, char *argv[])
 {
 int sum = 0;
-int n1 = 0;
-int n2 = 0;
-int i = 0;
-int j = 0;
-int res = 0;
-int n1_d = 0;
-int n2_d = 0;
+int i = 1, flag = 0;
 char ErrorMsg[] = "Error";
-if (argc == 3)
+if (argc == 1)
 {
-while (argv[1][i] != '\0')
-{
-if (argv[1][i] >= '0' && argv[1][i] <= '9')
-{
-n1_d++;
+	printf("%d\n",sum);
 }
 else
 {
-continue;
+	while (i < argc)
+	{
+		if (_is_digit(argv[i]))
+		{
+			sum += cvtdig(argv[i]);
+		}
+		else
+		{
+			printf("%s\n", ErrorMsg);
+			flag = 1;
+			break;
+		}
+		i++;
+	}
+	if (!flag)
+	{
+		printf("%d\n", sum);
+	}
 }
-i++;
-}
-while (argv[2][j] != '\0')
-{
-if (argv[2][j] >= '0' && argv[2][j] <= '9')
-{
-n2_d++;
-}
-else
-{
-continue;;
-}
-j++;
-}
-}
-else if (argc == 1)
-{
-sum = 0;
-}
-else
-{
-res = 1;
-}
-if (res == 1)
-{
-printf("%s\n", ErrorMsg);
-}
-else if ((i == n1_d) && (j == n2_d))
-{
-n1 = atoi(argv[1]);
-n2 = atoi(argv[2]);
-sum = Add(n1 , n2);
-printf("%d\n", sum);
-}
-return (res);
+
+return (0);
 }
 
