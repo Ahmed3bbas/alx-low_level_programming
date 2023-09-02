@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  *_strncat - Concatenate n characters of src with dest
  *@dest: Pointer to dest

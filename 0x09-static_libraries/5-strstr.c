@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  *_strstr - Concatenate n characters of src with dest
  *@haystack: Pointer to dest
