@@ -7,31 +7,36 @@
  *
  * Return: int
 */
-int power(int n , int p)
+
+int power(int n, int p)
 {
-        int s=1, i = 0;
-        while (i < p)
-        {
-                s *= n;
-                i++;
-        }
-        return (s);
+	int s = 1, i = 0;
+
+	while (i < p)
+	{
+		s *= n;
+		i++;
+	}
+	return (s);
 }
 
 /**
   * cvtdig - convert to digit
-  * @s - string
+  * @s: string
+  *
   * Return: intger number
   */
 
 int cvtdig(char *s)
 {
 
-	int i ,n = 0 , l = strlen(s);
+	int i, n = 0, l = strlen(s);
+
 	i = l - 1;
+
 	while (i >= 0)
 	{
-		n += ((s[l - (i + 1)] - '0') * power(10 , i));
+		n += ((s[l - (i + 1)] - '0') * power(10, i));
 		i--;
 	}
 	return (n);
@@ -40,7 +45,9 @@ int cvtdig(char *s)
 /**
   * _is_digit - check if input is digit
   * @s: string
-  * return: 1 if input is digit
+  *
+  * Return: 1 if input is digit
+  * 0 if not digit
   */
 
 int _is_digit(char *s)
@@ -51,12 +58,11 @@ int _is_digit(char *s)
 	while (s[i] != '\0')
 	{
 		c = s[i];
-		if(c < '0' || c > '9')
+		if (c < '0' || c > '9')
 		{
 			return (0);
 		}
 		i++;
-		
 	}
 	return (1);
 }
@@ -74,7 +80,7 @@ int i = 1, flag = 0;
 char ErrorMsg[] = "Error";
 if (argc == 1)
 {
-	printf("%d\n",sum);
+	printf("%d\n", sum);
 }
 else
 {
