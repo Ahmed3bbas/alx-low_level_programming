@@ -13,7 +13,16 @@ void _printchar(char *s, int i)
 		return;
 	}
 	_printchar(s, ++i);
-	_putchar(s[i]);
+	if (i == 1)
+	{
+		_putchar(s[i]);
+		_putchar('\n');
+		return;
+	}
+	else
+	{
+		_putchar(s[i]);
+	}
 }
 
 /**
