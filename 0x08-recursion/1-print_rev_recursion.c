@@ -1,6 +1,4 @@
 #include "main.h"
-
-#include "main.h"
 /**
   * _printchar - print char
   * @s: sting
@@ -26,5 +24,4 @@ void _printchar(char *s, int i)
 void _print_rev_recursion(char *s)
 {
 	_printchar(s, 0);
-	_putchar('\n');
 }
