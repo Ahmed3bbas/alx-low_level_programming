@@ -20,13 +20,11 @@ void _printchar(char *s, int i)
 
 
 /**
-  * void _puts_recursion - print string
+  * _puts_recursion - print string
   * @s: string
-  *
   * Return: void
   */
 void _puts_recursion(char *s)
 {
 	_printchar(s, 0);
-	
 }
