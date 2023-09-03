@@ -22,11 +22,11 @@ int _sqrt(int res, int div)
   */
 int _sqrt_recursion(int n)
 {
-	if (n < 4096)
+	if (n < 10000)
 		return (_sqrt(n, n / 2));
-	else if (n < 10000)
+	else if (n >= 10000)
 		return (_sqrt(n, n / 100));
-	else if (n < 1000000)
+	else if (n > 1000000)
 		return (_sqrt(n, n / 1000));
 	else
 		return (_sqrt(n, n / 2000));
