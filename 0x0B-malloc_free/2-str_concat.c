@@ -11,6 +11,12 @@ char *create_array(char *s)
 	char *newstr;
 	int l, i;
 
+	if (s == NULL)
+	{
+		newstr = malloc(1);
+		newstr[0] = '\0';
+		return (newstr);
+	}
 	l = strlen(s);
 	newstr = malloc(l + 1);
 
@@ -34,7 +40,9 @@ char *str_concat(char *s1, char *s2)
 	int i, l1, l2;
 
 	if (s1 == NULL && s2 == NULL)
-		return ("");
+	{
+		return (create_array(NULL));
+	}
 	else if (s1 == NULL)
 	{
 		return (create_array(s2));
