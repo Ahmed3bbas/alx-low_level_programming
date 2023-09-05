@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
+
 /**
  * str_concat - concatinate two strings in one string
  * @s1: First string
@@ -13,6 +14,10 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	else if (s1 == NULL)
+		return (s2);
+	else if (s2 == NULL)
+		return (s1);
 
 	l1 = strlen(s1);
 	l2 = strlen(s2);
