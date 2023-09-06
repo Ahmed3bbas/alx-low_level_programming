@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+
 /**
  * _getnumberofwords - get Number of words
  * @str: string
@@ -11,8 +13,13 @@ int _getnumberofwords(char *str)
 
 	for (i = 0; i < l; i++)
 	{
-		if ((str[i] == ' ' && str[i + 1] != ' ') || (str[i] != ' ' && i == 0))
+		if ((str[i] == ' ' && (str[i + 1] != ' '  && str[i + 1] != '\0')))
 		{
+			/*printf("%c\n", str[i+1]);*/
+			NW++;
+		} else if (str[i] != ' ' && i == 0)
+		{
+			/*printf("%c\n", str[i]);*/
 			NW++;
 		}
 	}
@@ -83,13 +90,15 @@ void arrayofwords(char **wordsgrid, char *str)
 			col++;
 			wordsgrid[row][col] = '\0';
 			row++;
+			col = 0;
 		}
-		else
+		else if (str[i] != ' ')
 		{
 			wordsgrid[row][col] = str[i];
 			col++;
 		}
 	}
+	wordsgrid[row] = NULL;
 }
 
 /**
@@ -105,9 +114,7 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-
 	l = strlen(str);
-
 	if (l == 0)
 		return (NULL);
 
@@ -117,18 +124,19 @@ char **strtow(char *str)
 	if (wordsgrid == NULL)
 		return (NULL);
 	arr = _sizeofwords(str);
+
 	if (arr == NULL)
 		return (NULL);
-
 	for (i = 0; i < NW; i++)
 	{
-		wordsgrid[i] = (char *)malloc(sizeof(char) * arr[i]);
+		wordsgrid[i] = (char *)malloc(sizeof(char) * (arr[i] + 1));
 		if (wordsgrid[i] == NULL)
 		{
+			printf("Stoped Here: %d\n", i);
 			stopflag = i;
 		}
 	}
-	if (!stopflag)
+	if (stopflag)
 	{
 		for (i = 0; i < stopflag - 1; i++)
 		{
@@ -138,5 +146,6 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	arrayofwords(wordsgrid, str);
+	free(arr);
 	return (wordsgrid);
 }
