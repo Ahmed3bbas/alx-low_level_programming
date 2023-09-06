@@ -75,7 +75,7 @@ char **createarraysinarray(char **wordsgrid, int *arr, int NW)
 
 	for (i = 0; i < NW; i++)
 	{
-		wordsgrid[i] = (char *)malloc(sizeof(char) * (arr[i] + 1));
+		wordsgrid[i] = (char *)malloc(sizeof(char) * (arr[i]));
 		if (wordsgrid[i] == NULL)
 		{
 			printf("Stoped Here: %d\n", i);
