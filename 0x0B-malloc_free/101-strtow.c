@@ -63,70 +63,16 @@ int *_sizeofwords(char *str)
 }
 
 /**
- * arrayofwords - convert string to array of words
- * @wordsgrid: array of words
- * @str: string
- * Return: void
+ * createarraysinarray - create arrays in array which is 2d array
+ * @wordsgrid: 2d array
+ * @arr: size of each string in array
+ * @NW: Number of Words
+ * Return: 2d array or null in failure
 */
-void arrayofwords(char **wordsgrid, char *str)
+char **createarraysinarray(char **wordsgrid, int *arr, int NW)
 {
-	int i, row = 0, col = 0, l = strlen(str);
+	int i, stopflag = 0;
 
-	for (i = 0; i < l; i++)
-	{
-		if (str[i] != ' ' && i == 0)
-		{
-			wordsgrid[row][col] = str[i];
-			col++;
-		}
-		else if (str[i] != ' ' && str[i - 1] == ' ')
-		{
-			wordsgrid[row][col] = str[i];
-			col++;
-		}
-		else if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-		{
-			wordsgrid[row][col] = str[i];
-			col++;
-			wordsgrid[row][col] = '\0';
-			row++;
-			col = 0;
-		}
-		else if (str[i] != ' ')
-		{
-			wordsgrid[row][col] = str[i];
-			col++;
-		}
-	}
-	wordsgrid[row] = NULL;
-}
-
-/**
- * strtow - main function process all previous functions
- * @str: string
- * Return: array of string
-*/
-char **strtow(char *str)
-{
-	int i, l, NW, stopflag = 0;
-	char **wordsgrid;
-	int *arr;
-
-	if (str == NULL)
-		return (NULL);
-	l = strlen(str);
-	if (l == 0)
-		return (NULL);
-
-	NW = _getnumberofwords(str);
-	wordsgrid = (char **)malloc(sizeof(char *) * (NW + 1));
-
-	if (wordsgrid == NULL)
-		return (NULL);
-	arr = _sizeofwords(str);
-
-	if (arr == NULL)
-		return (NULL);
 	for (i = 0; i < NW; i++)
 	{
 		wordsgrid[i] = (char *)malloc(sizeof(char) * (arr[i] + 1));
@@ -145,6 +91,84 @@ char **strtow(char *str)
 		free(wordsgrid);
 		return (NULL);
 	}
+	return (wordsgrid);
+}
+
+/**
+ * arrayofwords - convert string to array of words
+ * @wordsgrid: array of words
+ * @str: string
+ * Return: void
+*/
+void arrayofwords(char **wordsgrid, char *str)
+{
+	int i, row = 0, col = 0, l = strlen(str);
+
+	for (i = 0; i < l; i++)
+	{
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		{
+			wordsgrid[row][col] = str[i];
+			col++;
+			wordsgrid[row][col] = '\0';
+			row++;
+			col = 0;
+		}
+		else if (str[i] != ' ' && i == 0)
+		{
+			wordsgrid[row][col] = str[i];
+			col++;
+		}
+		else if (str[i] != ' ' && str[i - 1] == ' ')
+		{
+			wordsgrid[row][col] = str[i];
+			col++;
+		}
+		else if (str[i] != ' ')
+		{
+			wordsgrid[row][col] = str[i];
+			col++;
+		}
+	}
+	wordsgrid[row] = NULL;
+}
+
+/**
+ * strtow - main function process all previous functions
+ * @str: string
+ * Return: array of string
+*/
+char **strtow(char *str)
+{
+	int l, NW;
+	char **wordsgrid;
+	int *arr;
+
+	if (str == NULL)
+		return (NULL);
+	l = strlen(str);
+	if (l == 0)
+		return (NULL);
+
+	NW = _getnumberofwords(str);
+	wordsgrid = (char **)malloc(sizeof(char *) * (NW + 1));
+
+	if (wordsgrid == NULL)
+		return (NULL);
+	if (NW == 0)
+	{
+		free(wordsgrid);
+		return (NULL);
+	}
+	arr = _sizeofwords(str);
+
+	if (arr == NULL)
+		return (NULL);
+
+	wordsgrid = createarraysinarray(wordsgrid, arr, NW);
+
+	if (wordsgrid == NULL)
+		return (NULL);
 	arrayofwords(wordsgrid, str);
 	free(arr);
 	return (wordsgrid);
