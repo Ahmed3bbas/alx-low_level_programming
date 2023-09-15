@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* sum_them_all - Sum undefined number of arguments
+* print_numbers - Print undefined number of arguments
 * @separator: separator
 * @n: Number of arguments
 * @...: Optional Arguments
@@ -15,7 +15,10 @@ va_start(list, n);
 for (counter = 0 ; counter < (n - 1); counter++)
 {
 printf("%d", va_arg(list, int));
+if (separator != NULL)
+{
 printf("%s", separator);
+}
 }
 printf("%d", va_arg(list, int));
 printf("\n");
