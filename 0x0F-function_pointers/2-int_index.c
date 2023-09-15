@@ -14,6 +14,7 @@ int cmp_res = 0;
 if (size <= 0)
 {
 index = -1;
+return (index);
 }
 while (counter < size)
 {
