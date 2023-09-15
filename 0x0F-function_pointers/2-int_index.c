@@ -19,7 +19,7 @@ while (counter < size)
 {
 if (cmp != NULL)
 {
-cmp_res = cmp(array[counter]);
+cmp_res = (*cmp)(array[counter]);
 if (cmp_res > 0)
 {
 index = counter;

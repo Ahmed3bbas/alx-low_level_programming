@@ -13,7 +13,7 @@ while (counter < size)
 {
 if (action != NULL)
 {
-action(array[counter]);
+(*action)(array[counter]);
 }
 counter++;
 }
