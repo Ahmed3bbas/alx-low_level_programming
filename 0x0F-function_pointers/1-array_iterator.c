@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stddef.h>
 /**
  *array_iterator - Function that Executes Functions.
  *@array: Address of the Array.
@@ -11,7 +11,10 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 size_t counter = 0;
 while (counter < size)
 {
+if (action != NULL)
+{
 action(array[counter]);
+}
 counter++;
 }
 }

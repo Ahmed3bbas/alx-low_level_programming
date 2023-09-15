@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stddef.h>
 /**
  *int_index - Function that return Compare Index
  *@array: Address of the Array.
@@ -17,6 +17,8 @@ index = -1;
 }
 while (counter < size)
 {
+if (cmp != NULL)
+{
 cmp_res = cmp(array[counter]);
 if (cmp_res > 0)
 {
@@ -26,6 +28,7 @@ break;
 else if (cmp_res == 0)
 {
 index = -1;
+}
 }
 counter++;
 }
