@@ -1,10 +1,10 @@
 #include <stddef.h>
 /**
- *int_index - Function that return Compare Index
- *@array: Address of the Array.
- *@size: Size of the Array.
- *@cmp: Pointer to Function that compares.
- *Return: Always 0.
+ * int_index - Function that return Compare Index
+ * @array: Address of the Array.
+ * @size: Size of the Array.
+ * @cmp: Pointer to Function that compares.
+ * Return: Always 0.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
