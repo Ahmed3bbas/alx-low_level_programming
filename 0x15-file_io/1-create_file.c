@@ -6,13 +6,13 @@
 /**
  * create_file - create file and write some content
  * @filename: File Name you want to create or write on it
- * @text_content: text 
- * Return: 1 for success or -1 for failure 
+ * @text_content: text content
+ * Return: 1 for success or -1 for failure
 */
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-        ssize_t bytes_written;
+	ssize_t bytes_written;
 
 	if (filename == NULL)
 		return (-1);
@@ -28,5 +28,5 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 	}
 	close(fd);
-	return(1);
+	return (1);
 }
