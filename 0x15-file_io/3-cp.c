@@ -50,8 +50,8 @@ int main(int ac, char **av)
 		exit(99);
 	}
 
-	read_bytes = read(file_from, buf, sizeof(buf));
-	write(file_to, buf, read_bytes);
+	while ((read_bytes = read(file_from, buf, sizeof(buf))) > 0)
+		write(file_to, buf, read_bytes);
 
 	if (close(file_from) < 0)
 	{
