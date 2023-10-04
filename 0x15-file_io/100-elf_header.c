@@ -60,7 +60,7 @@ void print_elf_header(ELF_HEADER header)
 	unsigned int c;
 
 	printf("ELF Header:\n");
-	printf("Magic\t");
+	printf("Magic:\t");
 	while (i < 16)
 	{
 		printf("%02x ", header.ident[i]);
