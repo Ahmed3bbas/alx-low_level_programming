@@ -60,7 +60,7 @@ void print_elf_header(ELF_HEADER header)
 	unsigned int c;
 
 	printf("ELF Header:\n");
-	printf("Magic:\t");
+	printf("  Magic:   ");
 	while (i < 16)
 	{
 		printf("%02x ", header.ident[i]);
@@ -69,7 +69,7 @@ void print_elf_header(ELF_HEADER header)
 	printf("\n");
 
 	i = header.ident[4];
-	printf("Class:                             ");
+	printf("  Class:                             ");
 	if (i == 1)
 		printf("ELF32\n");
 	else if (i == 2)
@@ -78,7 +78,7 @@ void print_elf_header(ELF_HEADER header)
 		printf("Unknown\n");
 
 	c = header.ident[5];
-	printf("Data:                              ");
+	printf("  Data:                              ");
 	if (c == 1)
 		printf("2's complement, little endian\n");
 	else if (c == 2)
@@ -86,10 +86,10 @@ void print_elf_header(ELF_HEADER header)
 	else
 		printf("Unknown\n");
 
-	printf("Version:                           %d (current)\n", header.ident[6]);
+	printf("  Version:                           %d (current)\n", header.ident[6]);
 
 	c = header.ident[7];
-	printf("OS/ABI:                            ");
+	printf("  OS/ABI:                            ");
 	if (c == 0x00)
 		printf("UNIX - System V\n");
 	else if (c == 0x01)
@@ -129,10 +129,10 @@ void print_elf_header(ELF_HEADER header)
 	else
 		printf("Unknown\n");
 
-	printf("ABI Version:                       %d\n", header.ident[8]);
+	printf("  ABI Version:                       %d\n", header.ident[8]);
 
 	c = header.type[0];
-	printf("Type:                              ");
+	printf("  Type:                              ");
 
 	if (c == 0x0000)
 		printf("NONE (Unknown)\n");
@@ -154,6 +154,6 @@ void print_elf_header(ELF_HEADER header)
 		printf("HIPROC (Reserved inclusive range) (Processor specific)\n");
 	else
 		printf("Unknown\n");
-	printf("Entry point address:               %#x\n", (int)header.entry);
+	printf("  Entry point address:               %#x\n", (int)header.entry);
 
 }
